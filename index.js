@@ -16,6 +16,15 @@ connectDB()
 
 // 3 RUTEO
 
+// API
+app.use('/api/proyectos', require('./routes/proyectos'))
+
+
+// MONITOREO (PARA VER QUE SÍ FUNCIONE)
+app.get("/", (req, res) => {
+    res.send("Hola mundo")
+})
+ 
 
 
 // 4 SERVIDOR
