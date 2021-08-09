@@ -2,6 +2,7 @@
 
 const express = require('express')
 const connectDB = require('./config/db')
+const cors = require('cors')
 
 const app = express()
 
@@ -12,6 +13,13 @@ require('dotenv').config()
 
 // CONEXIÓN A DB
 connectDB()
+
+// Habilitar CORS
+// cross origin resource sharing
+app.use(cors())
+
+// ACTIVAR BODY PARSER
+app.use(express.json({extended: true}))
 
 
 // 3 RUTEO
